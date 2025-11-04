@@ -1,96 +1,123 @@
-﻿# Saude-Mais
+# Projeto Mobile Saúde Mais
 
-📌 Problema Abordado e Justificativa
+Sistema completo de gestão de saúde com frontend e backend separados.
 
-Em bairros como Edson Queiroz, Barroso e Passaré, moradores enfrentam dificuldades no acesso às consultas médicas, prontuários, campanhas de vacinação e informações sobre serviços dos postos de saúde comunitários.
-A falta de organização e comunicação resulta em filas, consultas perdidas e baixa adesão às campanhas preventivas.
+## 📁 Estrutura do Projeto
 
-Este projeto busca oferecer uma solução digital multiplataforma para melhorar o acesso, a eficiência e a transparência na gestão da saúde comunitária.
+```
+Projeto-mobile-saude-mais/
+├── SaudeMais-front/     # Frontend React + TypeScript + Vite
+└── SaudeMais-Backend/   # Backend Node.js + Express + TypeScript
+```
 
-🎯 Objetivos do Sistema
+## 🚀 Início Rápido
 
-- Facilitar o agendamento de consultas.
-- Permitir que pacientes acessem seu prontuário simplificado.
-- Disponibilizar receitas digitais para acompanhamento de tratamentos.
-- Divulgar e gerenciar campanhas de saúde e vacinação.
-- Enviar notificações automáticas sobre consultas e campanhas.
-- Fornecer relatórios e dashboards para gestores de postos.
+### 1. Backend
 
-🌍 Relação do projeto com o ODS 11
-O ODS 11 – Cidades e Comunidades Sustentáveis busca tornar as cidades e os assentamentos humanos inclusivos, seguros, resilientes e sustentáveis.
-Nosso projeto se conecta ao ODS 11 pelos seguintes aspectos:
+1. Navegue até a pasta do backend:
+```bash
+cd SaudeMais-Backend
+```
 
-1. Acesso inclusivo à saúde básica
-  - A plataforma facilita que moradores de bairros como Edson Queiroz, Barroso e Passaré tenham acesso organizado a consultas, prontuários e campanhas, reduzindo desigualdades urbanas.
-2. Redução de deslocamentos e filas
-  - Com agendamento digital e notificações automáticas, os pacientes não precisam esperar horas em filas nos postos, diminuindo congestionamentos e melhorando a mobilidade urbana local.
-3. Gestão inteligente e sustentável dos serviços públicos
-  - O sistema fornece relatórios para gestores avaliarem a demanda dos postos, permitindo melhor distribuição de recursos e planejamentos mais eficientes para a comunidade.
-4. Promoção da saúde preventiva
-   - Ao divulgar campanhas de vacinação e prevenção, a plataforma apoia políticas de saúde comunitária que fortalecem a resiliência social, um dos pilares do ODS 11.
+2. Instale as dependências:
+```bash
+npm install
+```
 
+3. Configure as variáveis de ambiente:
+```bash
+# Crie o arquivo .env
+# Edite com suas credenciais do Supabase:
+```
 
-  📚 Escopo do Projeto
+```env
+SUPABASE_URL=https://seu-projeto.supabase.co
+SUPABASE_SERVICE_ROLE_KEY=sua_chave_service_role
+SUPABASE_ANON_KEY=sua_chave_anon
+PORT=3001
+NODE_ENV=development
+FRONTEND_URL=http://localhost:5173
+```
 
-A plataforma atenderá três perfis de usuário:
-- Paciente: consultas, prontuário, receitas e notificações.
-- Profissional de Saúde: registros de atendimentos, receitas e prontuários.
-- Gestor: relatórios, gerenciamento de campanhas e monitoramento da eficiência do posto.
+4. Execute o script SQL no Supabase:
+   - Acesse o SQL Editor no Supabase
+   - Execute o conteúdo de `SaudeMais-front/supabase-setup.sql`
 
-  🏗️ Visão Geral da Arquitetura
+5. Execute o backend:
+```bash
+npm run dev
+```
 
-O sistema será baseado em arquitetura Cliente-Servidor:
+O backend estará rodando em `http://localhost:3001`
 
-flowchart TD
-    A[Usuário] -->|Web/Mobile| B[Frontend React/React Native]
-    B --> C[API REST - Node.js/Express]
-    C --> D[(Banco de Dados - PostgreSQL)]
-    C --> E[Serviços Externos - Firebase, Google Maps]
+✅ **Health Check:** `http://localhost:3001/health`
 
-- Frontend Web: React.js
-- Frontend Mobile: React Native
-- Backend: Node.js + Express
-- Banco de Dados: PostgreSQL
-- Notificações: Firebase Cloud Messaging
-- Mapas: Google Maps API
+### 2. Frontend
 
-🛠️ Tecnologias Propostas
-- Frontend: React.js, React Native
-- Backend: Node.js, Express
-- Banco de Dados: PostgreSQL
-- APIs Externas: Firebase, Google Maps
-- Ferramentas de Documentação: Markdown, Swagger, Draw.io, Figma
+1. Navegue até a pasta do frontend:
+```bash
+cd SaudeMais-front
+```
 
-  ✅ Cronograma – Etapa 2 (N708)
-Etapa	Atividade	Período
-1	Implementação do Backend (APIs, banco de dados)	Semana 1-3
-2	Desenvolvimento do Frontend Web	Semana 4-6
-3	Desenvolvimento do App Mobile	Semana 7-9
-4	Integração com APIs externas	Semana 10
-5	Testes e Validação	Semana 11
-6	Ajustes finais e entrega	Semana 12
+2. Instale as dependências:
+```bash
+npm install
+```
 
-🖼️ Protótipos de Interface
-Os protótipos de interface foram desenvolvidos no Figma, contemplando as principais funcionalidades da plataforma.
+3. Configure as variáveis de ambiente (opcional):
+```bash
+# Crie um arquivo .env
+echo "VITE_API_URL=http://localhost:3001" > .env
+```
 
-🔗 Clique aqui para acessar os protótipos no Figma
- https://saude-mais.figma.site/
+4. Execute o frontend:
+```bash
+npm run dev
+```
 
-Telas previstas:
- - Login/Cadastro – autenticação de pacientes, profissionais e gestores.
- - Dashboard do Paciente – consultas agendadas, receitas, notificações.
- - Agendamento de Consultas – escolha de posto, data e horário, cancelamento.
- - Prontuário Simplificado – visualização pelo paciente e edição por médicos.
- - Receitas Digitais – emissão por profissionais e acesso pelos pacientes.
- - Campanhas de Saúde – listagem pública e aprovação pelo gestor.
- - Painel do Gestor – relatórios e gerenciamento de campanhas.
+O frontend estará rodando em `http://localhost:5173`
 
-  👥 Integrantes da Equipe
+## ✅ Status Atual
 
-Nome Fabricio da Silva Santos - 2319166  – Função: Arquitetura do software
-Nome Ana Rebeca Pereira dos Santos - 2326244 – Função: Front-end
-Nome Maria Tainá Leitão de Castro - 23232806 – Função: Front-end
-Nome José Eliezer de Almeida Alves - 2326192– Função: Back-end
-Nome Erisvan da Silva Ximenes - 2317584 – Função: Back-end
+- ✅ Backend: Rodando na porta 3001
+- ✅ Frontend: Configurado para porta 5173
+- ✅ Integração: Funcionando
+- ⚠️ Supabase: Configurar credenciais no `.env`
 
+## 📚 Documentação
+
+- [Backend README](SaudeMais-Backend/README.md)
+- [Frontend README](SaudeMais-front/README.md)
+
+## 🔧 Tecnologias
+
+### Frontend
+- React 18
+- TypeScript
+- Vite
+- Tailwind CSS
+- Radix UI
+
+### Backend
+- Node.js
+- Express
+- TypeScript
+- Supabase
+- Zod (validação)
+
+## 📝 Pré-requisitos
+
+- Node.js 18+
+- Conta no Supabase
+- Projeto Supabase configurado
+
+## 🔐 Configuração do Supabase
+
+1. Crie um projeto no [Supabase](https://supabase.com)
+2. Execute o script SQL fornecido em `SaudeMais-front/supabase-setup.sql`
+3. Configure as credenciais no backend (arquivo `.env`)
+
+## 📄 Licença
+
+ISC
 
