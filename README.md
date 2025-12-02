@@ -2,6 +2,21 @@
 
 Sistema completo de gestão de saúde com frontend e backend separados.
 
+## 📝 Objetivo do Projeto
+
+O **Projeto Mobile Saúde Mais** é um sistema completo de gestão de saúde desenvolvido para **Unidades Básicas de Saúde (UBS)**.
+
+**Problema Solucionado:** O sistema visa otimizar o tempo de atendimento e centralizar o acesso a dados de pacientes em comunidades com recursos limitados. Além disso, elimina a necessidade de o paciente sair de casa para marcar consultas. [cite_start]O projeto contribui diretamente com o **ODS 11 (Cidades e Comunidades Sustentáveis)** ao promover o acesso a informações essenciais para a saúde pública local.
+
+## ✨ Funcionalidades Implementadas
+
+O sistema implementa as seguintes funcionalidades:
+
+* **Autenticação:** Login e Cadastro de usuários. (Status: Completo) [cite_start][cite: 144, 145]
+* **Gestão de Pacientes:** CRUD (Criação, Leitura, Atualização, Deleção) de fichas de pacientes. (Status: Incompleto) [cite_start][cite: 144, 145]
+* **Registro de Consultas:** Criação de novos prontuários e histórico médico. (Status: Incompleto) [cite_start][cite: 144, 145]
+* **Busca:** Filtro avançado de pacientes por nome e CPF. (Status: Completo) [cite_start][cite: 144, 145]
+
 ## 📁 Estrutura do Projeto
 
 ```
@@ -120,4 +135,5 @@ O frontend estará rodando em `http://localhost:5173`
 ## 📄 Licença
 
 ISC
+
 
