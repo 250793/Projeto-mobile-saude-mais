@@ -151,5 +151,8 @@ Processo: Realizamos uma apresentação das telas e funcionalidades principais v
 Principais Feedbacks: O principal feedback recebido foi relacionado ao formulário de cadastro de paciente.
 Os detalhes completos, evidências fotográficas e o relatório estão na pasta validation/
 
+👥 Integrantes da Equipe
+
+Nome Fabricio da Silva Santos - 2319166 – Função: Arquitetura do software Nome Ana Rebeca Pereira dos Santos - 2326244 – Função: Front-end Nome Maria Tainá Leitão de Castro - 2323206 – Função: Front-end Nome José Eliezer de Almeida Alves - 2326192– Função: Back-end Nome Erisvan da Silva Ximenes - 2317584 – Função: Back-end
 
 
