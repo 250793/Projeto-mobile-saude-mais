@@ -2,6 +2,20 @@
 
 Sistema completo de gestão de saúde com frontend e backend separados.
 
+## 📝 Objetivo do Projeto
+
+O **Projeto Mobile Saúde Mais** é um sistema completo de gestão de saúde desenvolvido para **Unidades Básicas de Saúde (UBS)**.
+
+**Problema Solucionado:** O sistema visa otimizar o tempo de atendimento e centralizar o acesso a dados de pacientes em comunidades com recursos limitados. Além disso, elimina a necessidade de o paciente sair de casa para marcar consultas.O projeto contribui diretamente com o **ODS 11 (Cidades e Comunidades Sustentáveis)** ao promover o acesso a informações essenciais para a saúde pública local.
+
+## ✨ Funcionalidades Implementadas
+
+O sistema implementa as seguintes funcionalidades:
+
+* **Autenticação:** Login e Cadastro de usuários. (Status: Completo)
+* **Gestão de Pacientes:** CRUD (Criação, Leitura, Atualização, Deleção) de fichas de pacientes. (Status: Incompleto)
+* **Registro de Consultas:** Criação de novos prontuários e histórico médico. (Status: Incompleto)
+* **Busca:** Filtro avançado de pacientes por nome. (Status: Completo)
 ## 📁 Estrutura do Projeto
 
 ```
@@ -89,6 +103,13 @@ O frontend estará rodando em `http://localhost:5173`
 - [Backend README](SaudeMais-Backend/README.md)
 - [Frontend README](SaudeMais-front/README.md)
 
+## ⚙️ Arquitetura do Sistema
+
+O sistema segue uma arquitetura multicamadas com Frontend e Backend desacoplados, comunicando-se via APIs.
+
+* **Frontend (Cliente):** Desenvolvido em React/TypeScript, responsável pela interface e experiência do usuário.
+* **Backend (API):** Desenvolvido em Node.js/Express, atuando como o servidor de aplicação e lógica de negócio.
+
 ## 🔧 Tecnologias
 
 ### Frontend
@@ -120,4 +141,18 @@ O frontend estará rodando em `http://localhost:5173`
 ## 📄 Licença
 
 ISC
+
+🧑‍🤝‍🧑 Validação com Público-Alvo
+A validação foi realizada conforme exigido na atividade.
+Público-Alvo Específico: Adriana Lima Goes do NAC, do Posto Oliveira Pombo.
+Localização: Bairro Panamericano.
+Contexto: Necessidade de digitalizar o cadastro de medicamentos.
+Processo: Realizamos uma apresentação das telas e funcionalidades principais via Presencial.
+Principais Feedbacks: O principal feedback recebido foi relacionado ao formulário de cadastro de paciente.
+Os detalhes completos, evidências fotográficas e o relatório estão na pasta validation/
+
+👥 Integrantes da Equipe
+
+Nome Fabricio da Silva Santos - 2319166 – Função: Arquitetura do software Nome Ana Rebeca Pereira dos Santos - 2326244 – Função: Front-end Nome Maria Tainá Leitão de Castro - 2323206 – Função: Front-end Nome José Eliezer de Almeida Alves - 2326192– Função: Back-end Nome Erisvan da Silva Ximenes - 2317584 – Função: Back-end
+
 

@@ -2,6 +2,7 @@ import express from 'express'
 import cors from 'cors'
 import dotenv from 'dotenv'
 import authRoutes from './routes/auth.routes.js'
+import consultasRoutes from './routes/consultas.routes.js'
 
 // Carrega variáveis de ambiente
 dotenv.config()
@@ -42,6 +43,7 @@ app.get('/health', (req, res) => {
 
 // Rotas
 app.use('/api/auth', authRoutes)
+app.use('/api/consultas', consultasRoutes)
 
 // Rota 404
 app.use((req, res) => {
