@@ -29,12 +29,20 @@ export const formatCEP = (value: string): string => {
 };
 
 export const validateCPF = (cpf: string): boolean => {
+  console.log('CPF ->',cpf);
+  
   const numbers = cpf.replace(/\D/g, '');
   
-  if (numbers.length !== 11) return false;
+  if (numbers.length !== 11) {
+    console.log('false 1');
+    
+    return false};
   
   // Verifica se todos os dígitos são iguais
-  if (/^(\d)\1+$/.test(numbers)) return false;
+  if (/^(\d)\1+$/.test(numbers)) {
+    console.log('false 2');
+    
+    return false};
   
   // Calcula o primeiro dígito verificador
   let sum = 0;
@@ -44,7 +52,10 @@ export const validateCPF = (cpf: string): boolean => {
   let remainder = sum % 11;
   let digit1 = remainder < 2 ? 0 : 11 - remainder;
   
-  if (parseInt(numbers[9]) !== digit1) return false;
+  if (parseInt(numbers[9]) !== digit1) {
+    console.log('false 3');
+    
+    return false};
   
   // Calcula o segundo dígito verificador
   sum = 0;
@@ -53,6 +64,8 @@ export const validateCPF = (cpf: string): boolean => {
   }
   remainder = sum % 11;
   let digit2 = remainder < 2 ? 0 : 11 - remainder;
+  
+  console.log('true?',parseInt(numbers[10]) === digit2);
   
   return parseInt(numbers[10]) === digit2;
 };

@@ -107,6 +107,9 @@ class ApiClient {
         }
       }
 
+      console.log("BODY enviado:", body);
+
+
       const response = await fetch(`${this.baseURL}${endpoint}`, {
         method: 'POST',
         headers,
