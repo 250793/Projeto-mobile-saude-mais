@@ -141,6 +141,7 @@ O sistema segue uma arquitetura multicamadas com Frontend e Backend desacoplados
 ## 📄 Licença
 
 ISC
+
 🧑‍🤝‍🧑 Validação com Público-Alvo
 A validação foi realizada conforme exigido na atividade.
 Público-Alvo Específico: Adriana Lima Goes do NAC, do Posto Oliveira Pombo.
@@ -149,5 +150,6 @@ Contexto: Necessidade de digitalizar o cadastro de medicamentos.
 Processo: Realizamos uma apresentação das telas e funcionalidades principais via Presencial.
 Principais Feedbacks: O principal feedback recebido foi relacionado ao formulário de cadastro de paciente.
 Os detalhes completos, evidências fotográficas e o relatório estão na pasta validation/
+
 
 
